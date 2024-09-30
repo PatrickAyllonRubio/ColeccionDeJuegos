@@ -14,6 +14,7 @@
 		5FE542D22CAB595C00172EEE /* AyllonColeccionDeJuegos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5FE542D02CAB595C00172EEE /* AyllonColeccionDeJuegos.xcdatamodeld */; };
 		5FE542D42CAB595E00172EEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FE542D32CAB595E00172EEE /* Assets.xcassets */; };
 		5FE542D72CAB595E00172EEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FE542D52CAB595E00172EEE /* LaunchScreen.storyboard */; };
+		5FE542DF2CAB631000172EEE /* JuegosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE542DE2CAB631000172EEE /* JuegosViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		5FE542D32CAB595E00172EEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FE542D62CAB595E00172EEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5FE542D82CAB595E00172EEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FE542DE2CAB631000172EEE /* JuegosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuegosViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				5FE542D52CAB595E00172EEE /* LaunchScreen.storyboard */,
 				5FE542D82CAB595E00172EEE /* Info.plist */,
 				5FE542D02CAB595C00172EEE /* AyllonColeccionDeJuegos.xcdatamodeld */,
+				5FE542DE2CAB631000172EEE /* JuegosViewController.swift */,
 			);
 			path = AyllonColeccionDeJuegos;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FE542DF2CAB631000172EEE /* JuegosViewController.swift in Sources */,
 				5FE542D22CAB595C00172EEE /* AyllonColeccionDeJuegos.xcdatamodeld in Sources */,
 				5FE542CC2CAB595C00172EEE /* ViewController.swift in Sources */,
 				5FE542C82CAB595C00172EEE /* AppDelegate.swift in Sources */,
