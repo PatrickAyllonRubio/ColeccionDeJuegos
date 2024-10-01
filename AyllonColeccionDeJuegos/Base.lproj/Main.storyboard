@@ -33,7 +33,7 @@
                     <navigationItem key="navigationItem" id="Uxm-cc-RKN">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="NYc-MW-HnT">
                             <connections>
-                                <segue destination="p2y-vm-yF2" kind="show" id="3Y3-vl-twE"/>
+                                <segue destination="p2y-vm-yF2" kind="show" identifier="juegoSegue" id="3Y3-vl-twE"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -53,20 +53,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TFL-Av-owS">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TFL-Av-owS">
                                 <rect key="frame" x="67" y="120" width="280" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="464-pk-9fh"/>
-                                    <constraint firstAttribute="width" constant="280" id="VYA-zr-1f2"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese Titulo" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1kj-rJ-3om">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese Titulo" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1kj-rJ-3om">
                                 <rect key="frame" x="67" y="290" width="280" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndh-qa-sY7">
-                                <rect key="frame" x="175" y="344" width="64" height="34"/>
+                                <rect key="frame" x="175" y="357" width="64" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Agregar"/>
@@ -74,18 +72,17 @@
                                     <action selector="agregarTapped:" destination="p2y-vm-yF2" eventType="touchUpInside" id="0HL-ZR-4Qn"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ek6-TD-K45">
+                                <rect key="frame" x="47" y="411" width="320" height="216"/>
+                            </pickerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5AI-MY-xM5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="1kj-rJ-3om" firstAttribute="top" secondItem="TFL-Av-owS" secondAttribute="bottom" constant="20" id="3k7-Wl-uVD"/>
-                            <constraint firstItem="1kj-rJ-3om" firstAttribute="leading" secondItem="5AI-MY-xM5" secondAttribute="leading" constant="67" id="7nd-E9-TUs"/>
-                            <constraint firstItem="5AI-MY-xM5" firstAttribute="trailing" secondItem="1kj-rJ-3om" secondAttribute="trailing" constant="67" id="BTj-oK-ZOz"/>
-                            <constraint firstItem="TFL-Av-owS" firstAttribute="top" secondItem="5AI-MY-xM5" secondAttribute="top" constant="32" id="TeU-h6-70K"/>
-                            <constraint firstItem="TFL-Av-owS" firstAttribute="centerX" secondItem="djV-M0-hqo" secondAttribute="centerX" id="agm-hL-zOb"/>
-                            <constraint firstItem="ndh-qa-sY7" firstAttribute="top" secondItem="1kj-rJ-3om" secondAttribute="bottom" constant="20" id="h7Z-Uj-igh"/>
-                            <constraint firstItem="ndh-qa-sY7" firstAttribute="centerX" secondItem="djV-M0-hqo" secondAttribute="centerX" id="ilE-mK-EnL"/>
-                            <constraint firstItem="TFL-Av-owS" firstAttribute="width" secondItem="1kj-rJ-3om" secondAttribute="width" id="zzt-2c-yL3"/>
+                            <constraint firstItem="ek6-TD-K45" firstAttribute="top" secondItem="ndh-qa-sY7" secondAttribute="bottom" constant="20" id="0Fr-sh-wJN"/>
+                            <constraint firstItem="ndh-qa-sY7" firstAttribute="centerX" secondItem="djV-M0-hqo" secondAttribute="centerX" id="glI-WA-pHP"/>
+                            <constraint firstItem="ek6-TD-K45" firstAttribute="centerX" secondItem="djV-M0-hqo" secondAttribute="centerX" id="gzq-6O-DLJ"/>
+                            <constraint firstItem="5AI-MY-xM5" firstAttribute="bottom" secondItem="ek6-TD-K45" secondAttribute="bottom" constant="186" id="vHP-Gy-z8t"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -105,6 +102,8 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="agregarActualizarBoton" destination="ndh-qa-sY7" id="vcH-Dq-MgE"/>
+                        <outlet property="categoriaPickerView" destination="ek6-TD-K45" id="u2U-cl-vy3"/>
                         <outlet property="imageView" destination="TFL-Av-owS" id="H9g-de-w2y"/>
                         <outlet property="tituloTextField" destination="1kj-rJ-3om" id="TJo-JU-LQT"/>
                     </connections>
